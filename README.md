@@ -1,2 +1,2 @@
 # CrispySuite
-Various Latex Packages
+Various Custom Latex Packages and Classes
