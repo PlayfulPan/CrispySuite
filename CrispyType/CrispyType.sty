@@ -1,0 +1,58 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{CrispyType}
+
+\RequirePackage{iftex}
+
+% Main Font Setup
+
+    \ifLuaTeX
+        \RequirePackage{mathtools}
+        \RequirePackage[math-style=TeX, warnings-off={mathtools-colon, mathtools-overbracket}]{unicode-math}
+
+        \setmainfont{Stix Two Text}
+        \setmathfont{STIX Two Math}[CharacterVariant=04, script-features={CharacterVariant=04}, sscript-features={CharacterVariant=04}]
+        \setmathfont{STIX Two Math}[range={scr,bfscr},StylisticSet=01]
+
+    \else
+        \RequirePackage[utf8]{inputenc}
+        \RequirePackage{stix2}
+        \RequirePackage{mathtools}
+
+        \DeclareSymbolFont{stix2-Syms}{TS1}{stix2}{m}{n}
+            \DeclareMathSymbol{\OhmSymbol}{\mathord}{stix2-Syms}{87}
+            \DeclareMathSymbol{\MicroSymbol}{\mathord}{stix2-Syms}{181}
+
+        \providecommand{\symbf}[1]{\mathbf{#1}}
+        \providecommand{\symsf}[1]{\mathsf{#1}}
+        \providecommand{\symcal}[1]{\mathcal{#1}}
+        \providecommand{\symbfcal}[1]{\mathbf{\mathcal{#1}}}
+        \providecommand{\mathcolon}{:}
+    \fi
+
+% Other Packages
+
+    \RequirePackage[final]{microtype}
+    \RequirePackage[USenglish]{babel}
+    \RequirePackage[strict=true]{csquotes}
+    \RequirePackage[version=4]{mhchem}
+
+
+% SI Units
+
+    \RequirePackage{siunitx}
+        \sisetup{list-final-separator = {, and }}
+        \ifLuaTeX
+            \DeclareSIUnit{\angstrom}{Å}
+            \DeclareSIUnit{\degreeFahrenheit}{℉}
+            \DeclareSIUnit{\ohm}{Ω}
+            \DeclareSIPrefix{\micro}{µ}{-6}
+
+            \DeclareSIUnit{\degreeCelsius}{℃}
+            \DeclareSIUnit{\kelvin}{K}
+
+        \else
+            \DeclareSIUnit{\angstrom}{\ensuremath{\Angstrom}}
+            \DeclareSIUnit{\degreeFahrenheit}{\ensuremath{\text{\textdegree}}F}
+            \DeclareSIUnit{\ohm}{\ensuremath{\OhmSymbol}}
+            \DeclareSIPrefix{\micro}{\ensuremath{\MicroSymbol}}{-6}
+        \fi

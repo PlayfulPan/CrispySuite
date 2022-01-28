@@ -1,0 +1,106 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{CrispyMacros}
+
+\RequirePackage{etoolbox}
+\RequirePackage{xparse}
+\RequirePackage{xpunctuate}
+\RequirePackage{mathtools}
+\RequirePackage[all, error]{onlyamsmath}
+\RequirePackage{derivative}
+\RequirePackage{mleftright}
+\RequirePackage{tikz-cd}
+
+%Text Macros
+
+    \newcommand{\ie}{i.e\xperiodcomma}
+    \newcommand{\eg}{e.g\xperiodcomma}
+    \newcommand{\etal}{et~al\xperiod}
+    \newcommand{\etc}{etc\xperiod}
+
+    \newcommand{\aem}[1][]{\ifblank{#1}{a.e\xperiod}{a.e.\@~[#1]}} %almosteverywhere
+
+
+
+% Math Symbols
+
+    \renewcommand{\emptyset}{\varnothing}
+
+    \newcommand{\dbar}{\textit{\mdseries đ}}
+    \newcommand{\updbar}{\textup{\mdseries đ}}
+
+
+    \newcommand{\blankvar}[1][1ex]{{\mathmakebox[#1][c]{\cdot}}} % Placeholder Dot
+
+
+    \newcommand{\Naturals}[1][]{\ifblank{#1}{\mathbb{N}}{\mathbb{N}^{#1}}}
+    \newcommand{\Integers}[1][]{\ifblank{#1}{\mathbb{Z}}{\mathbb{Z}^{#1}}}
+    \newcommand{\Rationals}[1][]{\ifblank{#1}{\mathbb{Q}}{\mathbb{Q}^{#1}}}
+    \newcommand{\Reals}[1][]{\ifblank{#1}{\mathbb{R}}{\mathbb{R}^{#1}}}
+    \newcommand{\Complexs}[1][]{\ifblank{#1}{\mathbb{C}}{\mathbb{C}^{#1}}}
+
+    \newcommand{\fleft}{\mathopen{}\left} % \left command with proper spacing for functions
+    \newcommand{\mathp}{\mathclose{\,\text{.}}}% Text period in math
+    \newcommand{\mathc}{\mathclose{\,\text{,}}}% Text Comma in math
+
+% Physical Constants
+
+    \newcommand{\PlanckConst}{h} % Planck Constant
+    \newcommand{\rPlanckConst}{\hslash} % Reduced Planck Constant
+    \newcommand{\BoltzmanK}{k_B}
+
+% Misc. Functions
+    \newcommand{\func}[4][\to]{#2\mathpunct{:} #3 #1 #4} % Function Definition
+    \newcommand{\setcomp}[1]{{#1}^{c}} %Set Compliments
+    \newcommand{\vb}[1]{{\mathbf{#1}}}
+
+% Category Theory
+
+    \DeclareMathOperator{\Mor}{mor}%Morphism Class
+    \DeclareMathOperator{\Id}{id}% Identity Morphism
+    \DeclareMathOperator{\Ob}{ob}% objects
+    \DeclareMathOperator{\Ar}{ar}% arrows
+    \DeclareMathOperator{\Dom}{dom}% Domain
+    \DeclareMathOperator{\Cod}{cod}% Codomain
+
+% Misc. Paired Delimeters
+    \DeclarePairedDelimiterX\commutator[2]{[}{]}{\ifblank{#1}{\blankvar[1.2ex]}{#1}\ifblank{#2}{{,}\blankvar[1.2ex]}{,#2}} % Commutator
+    \DeclarePairedDelimiterX\innerp[2]{\langle}{\rangle}{\ifblank{#2}{\blankvar[1.2ex]}{#2}\ifblank{#1}{{,}\blankvar[1.2ex]}{,#1}} % Inner Product
+    \DeclarePairedDelimiterX\norm[1]{\lVert}{\rVert}{\ifblank{#1}{\blankvar}{#1}} % Vector Norm
+    \DeclarePairedDelimiterX\abs[1]{\lvert}{\rvert}{\ifblank{#1}{\blankvar}{#1}} % Absolute Value
+    \DeclarePairedDelimiterX\eval[1]{.}{\rvert}{#1} % Evaluated at
+
+
+
+%Dirac Notation
+    \DeclarePairedDelimiter\ket{\lvert}{\rangle}
+    \DeclarePairedDelimiter\bra{\langle}{\rvert}
+    \DeclarePairedDelimiterX\braket[2]{\langle}{\rangle}{#1 \delimsize\vert\mathopen{}#2}
+    \DeclarePairedDelimiterX\ketbra[2]{\lvert}{\rvert}{#1\delimsize\rangle\delimsize\langle\mathopen{}#2}
+    \DeclarePairedDelimiterX\mel[3]{\langle}{\rangle}{#1\delimsize\vert\mathopen{}\,#2\,\delimsize\vert\mathopen{}#3}
+    \DeclarePairedDelimiterX\expval[1]{\langle}{\rangle}{#1}
+
+% Sets %
+    \providecommand\given{}
+    \newcommand\SetSymbol[1][]{\nonscript\:#1\vert\allowbreak\nonscript\:\mathopen{}}
+    \DeclarePairedDelimiterX{\Set}[1]\{\}{\renewcommand\given{\SetSymbol[\delimsize]}#1}
+
+% Groups %
+
+    \DeclarePairedDelimiterX\grpindex[2]{(}{)}{#1\mathinner{:}#2} % Group Index
+
+% ==================================================================================================================== %
+% ================================= Derivatives ============================================== %
+
+    \DeclareDifferential{\xdif}{\updbar}%Inexact Differential
+    \DeclareDifferential{\pathdif}{\mathcal{D}}% Functional Measure
+
+% =======================================================================================================
+% ============================== Commutative Diagrams ================================================
+
+    \input{STIX-Arrowheads.def} % Some poor bastard recreated stix2 arrowheads in tikz
+
+    \tikzcdset{
+        arrows = {line width = 0.068em},
+        arrow style = tikz,
+        diagrams={>={stix}}
+    }

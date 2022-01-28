@@ -1,0 +1,124 @@
+\ProvidesFile{CrispyBib.bbx}
+
+\RequireBibliographyStyle{phys}
+
+\ExecuteBibliographyOptions{%
+    chaptertitle = false      ,
+    biblabel     = brackets   ,
+    maxnames     = 3          ,
+    pageranges   = false      ,
+    defernumbers = true
+}
+
+\DeclareFieldFormat[article,inproceedings,patent]{title}{%
+        \iftoggle{bbx:articletitle}
+        {\mkbibemph{#1\isdot}}
+        {}%
+}
+
+\DeclareFieldFormat[book]{titlecase}{#1}
+\DeclareFieldFormat[book]{edition}{\ifinteger{#1}{\mkbibordedition{#1}}{#1}~ed.\@}
+
+\AtEveryBibitem{\ifentrytype{book}{
+        \clearname{translator}%
+        \clearname{editor}%
+        \clearname{editora}%
+        \clearname{editorb}%
+        \clearname{editorc}%
+        \clearfield{editorbtype}%
+        \clearfield{pagetotal}%
+        \clearlist{location}%
+        }%
+}
+
+\DeclareBibliographyDriver{article}{%
+      \usebibmacro{bibindex}%
+      \usebibmacro{begentry}%
+      \usebibmacro{author/translator+others}%
+      \setunit{\labelnamepunct}\newblock
+      \printtext[doi/url-link]{\usebibmacro{title}}%
+      \newunit
+      \printlist{language}%
+      \newunit\newblock
+      \usebibmacro{byauthor}%
+      \newunit\newblock
+      \usebibmacro{bytranslator+others}%
+      \newunit\newblock
+      \printfield{version}%
+      \newunit\newblock
+      \printtext{%
+        \usebibmacro{journal+issuetitle}%
+        \newunit
+        \usebibmacro{byeditor+others}%
+        \newunit
+        \usebibmacro{note+pages}%
+        \newunit\newblock
+        \iftoggle{bbx:isbn}
+          {\printfield{issn}}
+          {}%
+        \setunit{\addspace}%
+        \printfield{year}%
+      }%
+      \setunit{\addspace}%
+      \usebibmacro{doi+eprint+url}%
+      \newunit\newblock
+      \usebibmacro{addendum+pubstate}%
+      \setunit{\bibpagerefpunct}\newblock
+      \usebibmacro{pageref}%
+      \newunit\newblock
+      \iftoggle{bbx:related}
+        {\usebibmacro{related:init}%
+         \usebibmacro{related}}
+        {}%
+      \usebibmacro{finentry}%
+}
+
+
+\DeclareBibliographyDriver{book}{%
+      \usebibmacro{bibindex}%
+      \usebibmacro{begentry}%
+      \usebibmacro{author/editor+others/translator+others}%
+      \setunit{\printdelim{nametitledelim}}\newblock
+      \printtext[doi/url-link]{\usebibmacro{maintitle+title}}%
+      \newunit
+      \printlist{language}%
+      \newunit\newblock
+      \usebibmacro{byauthor}%
+      \newunit\newblock
+      \usebibmacro{byeditor+others}%
+      \newunit\newblock
+      \printfield{edition}%
+      \newunit
+      \iffieldundef{maintitle}
+        {\printfield{volume}%
+         \printfield{part}}
+        {}%
+      \newunit
+      \printfield{volumes}%
+      \newunit\newblock
+      \usebibmacro{series+number}%
+      \newunit\newblock
+      \printfield{note}%
+      \newunit\newblock
+      \usebibmacro{publisher+location+date}%
+      \newunit\newblock
+      \usebibmacro{chapter+pages}%
+      \newunit
+      \printfield{pagetotal}%
+      \newunit\newblock
+      \iftoggle{bbx:isbn}
+        {\printfield{isbn}}
+        {}%
+      \newunit\newblock
+      \usebibmacro{doi+eprint+url}%
+      \newunit\newblock
+      \usebibmacro{addendum+pubstate}%
+      \setunit{\bibpagerefpunct}\newblock
+      \usebibmacro{pageref}%
+      \newunit\newblock
+      \iftoggle{bbx:related}
+        {\usebibmacro{related:init}%
+         \usebibmacro{related}}
+        {}%
+      \usebibmacro{finentry}%
+}

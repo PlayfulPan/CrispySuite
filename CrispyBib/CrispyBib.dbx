@@ -1,0 +1,3 @@
+\ProvidesFile{CrispyBib.dbx}
+
+\DeclareDatamodelFields[type=field, datatype=literal]{collaboration}
