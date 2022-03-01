@@ -5,12 +5,6 @@
 \DeclareMathOperator{\Res}{Res}
 
 \hypersetup{
-                pdftitle={Test Document},
-                pdfauthor={Test Author},
-                pdfsubject={Test Subject},
-                pdfkeywords={Physics},
-                pdfcreator={Created by Test Application},
-                pdfproducer={Test Application V1.1},
                 pdfpagemode=UseOutlines,
                 bookmarksopen=true,
                 bookmarksnumbered=true
@@ -105,8 +99,21 @@ This proof may be found in \cite{rudinRealComplexAnalysis1986}. Observe that the
 
 Hey look its a quantum state! \subcref[theorem2]{theorem2:a}
     \begin{equation*}
-      \setcomp{A}
+      \ket{\phi}
     \end{equation*}
-    
+
+Here is a commutative diagram! \(\func{f}{X}{Y}\)
+
+\begin{tikzcd}
+    T
+    \arrow[drr, bend left, "x"]
+    \arrow[ddr, bend right, "y"]
+    \arrow[dr, dotted, "{(x,y)}" description] & & \\
+        & X \times_Z Y \arrow[r, "p"] \arrow[d, "q"]
+        & X \arrow[d, "f"] \\
+        & Y \arrow[r, "g"]
+        & Z
+\end{tikzcd}
+
 \printbibliography
 \end{document} 
