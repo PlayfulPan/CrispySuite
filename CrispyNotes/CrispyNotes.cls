@@ -53,7 +53,7 @@
     \RequirePackage{amsthm,thmtools}
     \RequirePackage{enumitem}
     \RequirePackage[style=CrispyBib]{biblatex}
-    \RequirePackage{hyperref}
+    \RequirePackage[a-3u]{pdfx}
     \RequirePackage{cleveref}
 
 
@@ -61,15 +61,6 @@
 
     % Hyperlink Format
             \hypersetup{
-                %pdftitle={},
-                %pdfauthor={},
-                %pdfsubject={},
-                %pdfkeywords={},
-                %pdfcreator={},
-                %pdfproducer={},
-                pdftrapped=False,
-                pdflang={en-US},%
-                %
                 pdfstartview=Fit,
                 pdfremotestartview=Fit,
                 pdfstartpage=1,
