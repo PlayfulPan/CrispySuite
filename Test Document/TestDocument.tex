@@ -1,18 +1,26 @@
-\documentclass[12pt]{CrispyNotes}
+\documentclass[12pt, ThmSectionNumbering]{CrispyNotes}
 \usepackage{CrispyMacros}
+
+\fancyhead[L]{\thepage\hspace{0.5cm}\keyterm{Vector Spaces, Matrices, and Index Notation}}
+
 
 \DeclareMathOperator{\Ind}{Ind}
 \DeclareMathOperator{\Res}{Res}
 
 \hypersetup{
                 pdfpagemode=UseOutlines,
-                bookmarksopen=true,
-                bookmarksnumbered=true
-        }
+}
 
 \addbibresource{Bibliography.bib}
 \begin{document}
+\hypertarget{bm:Introduction}{\section*{Introduction}}
+\markright{Introduction}
+\bookmark[dest=bm:Introduction, level=section]{Introduction}
+
+In this chapter we begin our study in earnest. The first order of business is to build up enough machinery to give a proper definition of manifolds. The chief problem with the provisional definition given in Chapter 1 is that it depends on having an \enquote{ambient Euclidean space} in which our $n$-manifold lives. This introduces a great deal of extraneous structure that is irrelevant to our purposes. Instead, we would like to view a manifold as a mathematical object in its own right, not as a subset of some larger space. The key concept that makes this possible is that of a topological space, which is the main topic of this chapter.
+
 \section{Topological Spaces}
+
 
 In this chapter we begin our study in earnest. The first order of business is to build up enough machinery to give a proper definition of manifolds. The chief problem with the provisional definition given in Chapter 1 is that it depends on having an \enquote{ambient Euclidean space} in which our $n$-manifold lives. This introduces a great deal of extraneous structure that is irrelevant to our purposes. Instead, we would like to view a manifold as a mathematical object in its own right, not as a subset of some larger space. The key concept that makes this possible is that of a topological space, which is the main topic of this chapter.
 
@@ -103,17 +111,21 @@ Hey look its a quantum state! \subcref[theorem2]{theorem2:a}
     \end{equation*}
 
 Here is a commutative diagram! \(\func{f}{X}{Y}\)
+        \begin{equation*}
+        \begin{tikzcd}
+            T
+            \arrow[drr, bend left, "x"]
+            \arrow[ddr, bend right, "y"]
+            \arrow[dr, dotted, "{(x,y)}" description] & & \\
+                & X \times_Z Y \arrow[r, "p"] \arrow[d, "q"]
+                & X \arrow[d, "f"] \\
+                & Y \arrow[r, "g"]
+                & Z
+        \end{tikzcd}
+        \end{equation*}
 
-\begin{tikzcd}
-    T
-    \arrow[drr, bend left, "x"]
-    \arrow[ddr, bend right, "y"]
-    \arrow[dr, dotted, "{(x,y)}" description] & & \\
-        & X \times_Z Y \arrow[r, "p"] \arrow[d, "q"]
-        & X \arrow[d, "f"] \\
-        & Y \arrow[r, "g"]
-        & Z
-\end{tikzcd}
-
+\pagebreak
+\hypertarget{bm:References}{}
+\bookmark[dest=bm:References, level=section]{References}
 \printbibliography
 \end{document} 
