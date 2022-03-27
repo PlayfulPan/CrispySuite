@@ -48,13 +48,22 @@
 
 % Packages %
 
-    \RequirePackage[margin=1in]{geometry}
+    \RequirePackage[margin=1in, head=14.5pt]{geometry}
+    \RequirePackage{fancyhdr}
     \RequirePackage{CrispyType}
     \RequirePackage{amsthm,thmtools}
     \RequirePackage{enumitem}
     \RequirePackage[style=CrispyBib]{biblatex}
     \RequirePackage[a-3u]{pdfx}
+    \RequirePackage[numbered]{bookmark}
     \RequirePackage{cleveref}
+
+    %Fancyhdr Setup
+        \pagestyle{fancy}
+        \fancyhf{}
+        \renewcommand{\sectionmark}[1]{\markright{\thesection.\ #1}{}}
+        \renewcommand{\subsectionmark}[1]{}
+        \fancyhead[R]{{\nouppercase{\rightmark}}}
 
 
 
@@ -104,7 +113,7 @@
         \newlength{\thm@postheadspace}
             \setlength{\thm@postheadspace}{1ex}
         \newlength{\thm@spacing}
-            \setlength{\thm@spacing}{\topsep}
+            \setlength{\thm@spacing}{2\topsep}
 
         \newcommand{\xdeclaretheorem}[4][]{% Declare a theorem with custom margins
             \newenvironment{#4}
