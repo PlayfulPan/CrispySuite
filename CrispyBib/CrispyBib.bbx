@@ -16,20 +16,38 @@
         {}%
 }
 
-\DeclareFieldFormat[book]{titlecase}{#1}
-\DeclareFieldFormat[book]{edition}{\ifinteger{#1}{\mkbibordedition{#1}}{#1}~ed.\@}
+\renewcommand*{\subtitlepunct}{\addcolon\space}
+\DeclarePunctuationPairs{colon}{*}
 
-\AtEveryBibitem{\ifentrytype{book}{
-        \clearname{translator}%
-        \clearname{editor}%
-        \clearname{editora}%
-        \clearname{editorb}%
-        \clearname{editorc}%
-        \clearfield{editorbtype}%
-        \clearfield{pagetotal}%
-        \clearlist{location}%
-        }%
+\DeclareFieldFormat[book,mvbook]{titlecase}{#1}
+\DeclareFieldFormat[book,mvbook]{edition}{\ifinteger{#1}{\mkbibordedition{#1}}{#1}~ed.\@}
+
+
+\AtEveryBibitem{
+        \ifentrytype{mvbook}{
+          \clearname{translator}%
+          \clearname{editor}%
+          \clearname{editora}%
+          \clearname{editorb}%
+          \clearname{editorc}%
+          \clearfield{editorbtype}%
+          \clearfield{pagetotal}%
+          \clearlist{location}%
+        }{}%
+        \ifentrytype{book}{
+          \clearname{translator}%
+          \clearname{editor}%
+          \clearname{editora}%
+          \clearname{editorb}%
+          \clearname{editorc}%
+          \clearfield{editorbtype}%
+          \clearfield{pagetotal}%
+          \clearlist{location}%
+        }{}%
 }
+
+
+
 
 \DeclareBibliographyDriver{article}{%
       \usebibmacro{bibindex}%
@@ -93,8 +111,6 @@
         {\printfield{volume}%
          \printfield{part}}
         {}%
-      \newunit
-      \printfield{volumes}%
       \newunit\newblock
       \usebibmacro{series+number}%
       \newunit\newblock
@@ -122,3 +138,4 @@
         {}%
       \usebibmacro{finentry}%
 }
+
