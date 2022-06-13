@@ -15,7 +15,7 @@ use_BibEngine = 2 # No Bibliography = 0 | BibTeX = 1 | Biber = 2
 #--------------------------------------------------------------
 
 clean_Before = True # Clear auxillary files + specified files before compilling
-clean_After = True # Clearauxillary files + specified files after compilling
+clean_After = False # Clearauxillary files + specified files after compilling
 
 protectedExtensions = ['.py', '.bib', '.tex'] # Protect file extensions
 protectedFiles = [] # Protect certain files from being cleaned | Must contain extension
@@ -25,13 +25,17 @@ clearFiles = [] # Files to remove w/ extensions | Overrides protected extensions
 
 #--------------------------------------------------------------
 
+
 useAuxDirectory = True	# Whether to use an auxillary directory
-auxDirectoryName = 'auxillary' #Name of auxillary folder to be created in current working directory
+auxDirectoryName = 'Auxillary' #Name of auxillary folder to be created in current working directory
+useSourceDirectory = True # Whether to use a source directory
+sourceDirectoryName = 'Source'
+
 
 pdfInteraction = True # Close/Open PDF file
 
 maxRunCount = 5 # Maximum number of times to rerun LaTeX
-
+	
 #=============================================================
 #================== Script Configuration =====================
 
@@ -69,10 +73,13 @@ biber_ReRun_Messages = [
 #======================= Initialization =========================
 
 workingDirectory = os.getcwd()
-auxDirectory = workingDirectory
+auxDirectory = workingDirectory	
+sourceDirectory = workingDirectory	
+
 if useAuxDirectory:
 	auxDirectory = workingDirectory+'\\'+auxDirectoryName
-
+if useSourceDirectory:
+	sourceDirectory=workingDirectory+'\\'+sourceDirectoryName	
 #================================================================
 #========================== Modules =============================
 
@@ -88,6 +95,9 @@ def runLaTeX(**kwargs):
 	auxFileDirectory = kwargs.get('auxFileDirectory', auxDirectory)
 	texCommands.append('-aux-directory='+auxFileDirectory)
 	
+	sourceFileDirectory = kwargs.get('sourceFileDirectory', sourceDirectory)
+	texCommands.append('-include-directory='+sourceFileDirectory)
+
 	fileName = kwargs.get('fileName', mainFile)
 	texCommands.append(fileName)
 	
@@ -124,14 +134,20 @@ def runBibTeX(**kwargs):
 def runBiber(**kwargs):
 	biberCommands = ['biber']
 
+	callPath = kwargs.get('callPath', sourceDirectory)
+
+
 	auxFileDirectory = kwargs.get('auxFileDirectory', auxDirectory)
+	sourceFileDirectory = kwargs.get('sourceFileDirectory', sourceDirectory)
 	biberCommands.append('--output-directory')
 	biberCommands.append(auxFileDirectory)
+	#biberCommands.append('--input-directory')
+	#biberCommands.append(sourceFileDirectory)
 
 	fileName = kwargs.get('fileName', mainFile)
 	biberCommands.append(fileName)
 
-	subprocess.run(biberCommands)
+	subprocess.run(biberCommands, cwd = callPath)
 
 #---------------------------------------------------------------------------------
 
@@ -232,8 +248,14 @@ def cleanUp(**kwargs):
 
 def closePDFS():
 	Acrobat = Dispatch("AcroExch.App")
-	Acrobat.CloseAllDocs()
-	Acrobat.Exit()
+	openDocs = []
+	numOpenDocs = Acrobat.GetNumAVDocs()
+	for i in range(numOpenDocs):
+		openDocs.append(Acrobat.GetAVDoc(i))
+	for doc in openDocs:
+		if doc.getPDDoc().getFileName() == pdfName+".pdf" or doc.getPDDoc().getFileName() == mainFile+".pdf":
+			doc.Close(1)
+
 
 def openPDF(**kwargs):
 	fileLocation = kwargs.get('fileLocation', workingDirectory)

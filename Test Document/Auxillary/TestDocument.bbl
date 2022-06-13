@@ -1,0 +1,409 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{leeIntroductionSmoothManifolds2013}{book}{}
+      \name{author}{1}{}{%
+        {{hash=36896354ee3aedc1a13d683ea773634e}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={John\bibnamedelima M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York}%
+      }
+      \list{publisher}{1}{%
+        {Springer-Verlag}%
+      }
+      \strng{namehash}{36896354ee3aedc1a13d683ea773634e}
+      \strng{fullhash}{36896354ee3aedc1a13d683ea773634e}
+      \strng{bibnamehash}{36896354ee3aedc1a13d683ea773634e}
+      \strng{authorbibnamehash}{36896354ee3aedc1a13d683ea773634e}
+      \strng{authornamehash}{36896354ee3aedc1a13d683ea773634e}
+      \strng{authorfullhash}{36896354ee3aedc1a13d683ea773634e}
+      \field{extraname}{1}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{2}
+      \field{isbn}{978-1-4419-9981-8}
+      \field{issn}{0072-5285}
+      \field{langid}{english}
+      \field{number}{218}
+      \field{pagetotal}{708}
+      \field{series}{Graduate {{Texts}} in {{Mathematics}}}
+      \field{title}{Introduction to Smooth Manifolds}
+      \field{year}{2013}
+      \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.1007/978-1-4419-9982-5
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\David\\Zotero\\storage\\MMM7PVGT\\Lee - 2013 - Introduction to smooth manifolds.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/978-1-4419-9982-5
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/978-1-4419-9982-5
+      \endverb
+    \endentry
+    \entry{rudinRealComplexAnalysis1986}{book}{}
+      \name{author}{1}{}{%
+        {{hash=33be2fc2739d3493c6d6cc5d56a4c41e}{%
+           family={Rudin},
+           familyi={R\bibinitperiod},
+           given={Walter},
+           giveni={W\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York}%
+      }
+      \list{publisher}{1}{%
+        {McGraw-Hill}%
+      }
+      \strng{namehash}{33be2fc2739d3493c6d6cc5d56a4c41e}
+      \strng{fullhash}{33be2fc2739d3493c6d6cc5d56a4c41e}
+      \strng{bibnamehash}{33be2fc2739d3493c6d6cc5d56a4c41e}
+      \strng{authorbibnamehash}{33be2fc2739d3493c6d6cc5d56a4c41e}
+      \strng{authornamehash}{33be2fc2739d3493c6d6cc5d56a4c41e}
+      \strng{authorfullhash}{33be2fc2739d3493c6d6cc5d56a4c41e}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{3}
+      \field{isbn}{978-0-07-054234-1}
+      \field{langid}{english}
+      \field{pagetotal}{416}
+      \field{title}{Real and Complex Analysis}
+      \field{year}{1986}
+      \field{dateera}{ce}
+    \endentry
+    \entry{blumenhagenIntroductionConformalField2009}{book}{}
+      \name{author}{2}{}{%
+        {{hash=1bee242018be62d95c73cd9e20636c22}{%
+           family={Blumenhagen},
+           familyi={B\bibinitperiod},
+           given={Ralph},
+           giveni={R\bibinitperiod}}}%
+        {{hash=8687c29f44b675f44154365a754e639f}{%
+           family={Plauschinn},
+           familyi={P\bibinitperiod},
+           given={Erik},
+           giveni={E\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Berlin, Heidelberg}%
+      }
+      \list{publisher}{1}{%
+        {Springer-Verlag}%
+      }
+      \strng{namehash}{77997961b71c55c6fbb47dcd6cc71818}
+      \strng{fullhash}{77997961b71c55c6fbb47dcd6cc71818}
+      \strng{bibnamehash}{77997961b71c55c6fbb47dcd6cc71818}
+      \strng{authorbibnamehash}{77997961b71c55c6fbb47dcd6cc71818}
+      \strng{authornamehash}{77997961b71c55c6fbb47dcd6cc71818}
+      \strng{authorfullhash}{77997961b71c55c6fbb47dcd6cc71818}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{1}
+      \field{isbn}{978-3-642-00449-0}
+      \field{issn}{0075-8450}
+      \field{langid}{english}
+      \field{number}{779}
+      \field{pagetotal}{265}
+      \field{series}{Lecture {{Notes}} in {{Physics}}}
+      \field{subtitle}{With Applications to String Theory}
+      \field{title}{Introduction to Conformal Field Theory}
+      \field{urlday}{12}
+      \field{urlmonth}{5}
+      \field{urlyear}{2022}
+      \field{year}{2009}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{doi}
+      \verb 10.1007/978-3-642-00450-6
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\David\\Zotero\\storage\\KW82JE85\\Blumenhagen and Plauschinn - 2009 - Introduction to conformal field theory.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.doi.org/10.1007/978-3-642-00450-6
+      \endverb
+      \verb{url}
+      \verb https://www.doi.org/10.1007/978-3-642-00450-6
+      \endverb
+    \endentry
+    \entry{leeIntroductionTopologicalManifolds2011}{book}{}
+      \name{author}{1}{}{%
+        {{hash=36896354ee3aedc1a13d683ea773634e}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={John\bibnamedelima M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York}%
+      }
+      \list{publisher}{1}{%
+        {Springer-Verlag}%
+      }
+      \strng{namehash}{36896354ee3aedc1a13d683ea773634e}
+      \strng{fullhash}{36896354ee3aedc1a13d683ea773634e}
+      \strng{bibnamehash}{36896354ee3aedc1a13d683ea773634e}
+      \strng{authorbibnamehash}{36896354ee3aedc1a13d683ea773634e}
+      \strng{authornamehash}{36896354ee3aedc1a13d683ea773634e}
+      \strng{authorfullhash}{36896354ee3aedc1a13d683ea773634e}
+      \field{extraname}{2}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{2}
+      \field{isbn}{978-1-4419-7939-1}
+      \field{issn}{0072-5285}
+      \field{langid}{english}
+      \field{number}{202}
+      \field{pagetotal}{433}
+      \field{series}{Graduate {{Texts}} in {{Mathematics}}}
+      \field{title}{Introduction to Topological Manifolds}
+      \field{year}{2011}
+      \field{dateera}{ce}
+      \true{nocite}
+      \verb{doi}
+      \verb 10.1007/978-1-4419-7940-7
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\David\\Zotero\\storage\\YAH8L3TB\\Lee - 2011 - Introduction to topological manifolds.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/978-1-4419-7940-7
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/978-1-4419-7940-7
+      \endverb
+    \endentry
+    \entry{polchinskiIntroductionBosonicString1998}{mvbook}{}
+      \name{author}{1}{}{%
+        {{hash=aede54e67e8b497c7bac1a17908bef51}{%
+           family={Polchinski},
+           familyi={P\bibinitperiod},
+           given={Joseph},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Cambridge}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{aede54e67e8b497c7bac1a17908bef51}
+      \strng{fullhash}{aede54e67e8b497c7bac1a17908bef51}
+      \strng{bibnamehash}{aede54e67e8b497c7bac1a17908bef51}
+      \strng{authorbibnamehash}{aede54e67e8b497c7bac1a17908bef51}
+      \strng{authornamehash}{aede54e67e8b497c7bac1a17908bef51}
+      \strng{authorfullhash}{aede54e67e8b497c7bac1a17908bef51}
+      \field{extraname}{1}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{String Theory comprises two volumes which give a comprehensive and pedagogic account of the subject. Volume 1, first published in 1998, provides a thorough introduction to the bosonic string. The first four chapters introduce the central ideas of string theory, the tools of conformal field theory and of the Polyakov path integral, and the covariant quantization of the string. The next three chapters treat string interactions: the general formalism, and detailed treatments of the tree level and one loop amplitudes. Chapter eight covers toroidal compactification and many important aspects of string physics, such as T-duality and D-branes. Chapter nine treats higher-order amplitudes, including an analysis of their finiteness and unitarity, and various nonperturbative ideas. An appendix giving a short course on path integral methods is included. This is an essential text and reference for graduate students and researchers interested in modern superstring theory.}
+      \field{isbn}{978-0-521-63303-1}
+      \field{langid}{english}
+      \field{maintitle}{String {{Theory}}}
+      \field{series}{Cambridge {{Monographs}} on {{Mathematical Physics}}}
+      \field{title}{An Introduction to the Bosonic String}
+      \field{volume}{1}
+      \field{volumes}{2}
+      \field{year}{1998}
+      \field{dateera}{ce}
+      \true{nocite}
+      \verb{doi}
+      \verb 10.1017/CBO9780511816079
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\David\\Zotero\\storage\\3HT37Y6E\\Polchinski - 1998 - An introduction to the bosonic string.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.doi.org/10.1017/CBO9780511816079
+      \endverb
+      \verb{url}
+      \verb https://www.doi.org/10.1017/CBO9780511816079
+      \endverb
+    \endentry
+    \entry{polchinskiSuperstringTheory1998}{mvbook}{}
+      \name{author}{1}{}{%
+        {{hash=aede54e67e8b497c7bac1a17908bef51}{%
+           family={Polchinski},
+           familyi={P\bibinitperiod},
+           given={Joseph},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Cambridge}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{aede54e67e8b497c7bac1a17908bef51}
+      \strng{fullhash}{aede54e67e8b497c7bac1a17908bef51}
+      \strng{bibnamehash}{aede54e67e8b497c7bac1a17908bef51}
+      \strng{authorbibnamehash}{aede54e67e8b497c7bac1a17908bef51}
+      \strng{authornamehash}{aede54e67e8b497c7bac1a17908bef51}
+      \strng{authorfullhash}{aede54e67e8b497c7bac1a17908bef51}
+      \field{extraname}{2}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{String Theory, first published in 1998, comprises two volumes which provide a comprehensive and pedagogic account of the subject. Volume 2 begins with an introduction to supersymmetric string theories and presents the important advances of recent years. The first three chapters introduce the type I, type II, and heterototic superstring theories and their interactions. The next two chapters present important recent discoveries about strongly coupled strings, beginning with a detailed treatment of D-branes and their dynamics, and covering string duality, M-theory, and black hole entropy. The final chapters are concerned with four-dimensional string theories, showing how some of the simplest string models connect with previous ideas for unifying the Standard Model. They collect many important results on world-sheet and spacetime symmetries. An appendix summarizes the necessary background on fermions and supersymmetry. An essential text and reference for graduate students and researchers interested in superstring theory.}
+      \field{isbn}{978-0-521-63304-8}
+      \field{langid}{english}
+      \field{maintitle}{String {{Theory}}}
+      \field{series}{Cambridge {{Monographs}} on {{Mathematical Physics}}}
+      \field{title}{Superstring Theory and Beyond}
+      \field{urlday}{10}
+      \field{urlmonth}{5}
+      \field{urlyear}{2022}
+      \field{volume}{2}
+      \field{volumes}{2}
+      \field{year}{1998}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{doi}
+      \verb 10.1017/CBO9780511618123
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\David\\Zotero\\storage\\C3JWES85\\Polchinski - 1998 - Superstring theory and beyond.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.doi.org/10.1017/CBO9780511618123
+      \endverb
+      \verb{url}
+      \verb https://www.doi.org/10.1017/CBO9780511618123
+      \endverb
+    \endentry
+    \entry{schottenloherMathematicalIntroductionConformal2008}{book}{}
+      \name{author}{1}{}{%
+        {{hash=81f331dc16ef91712c32d554f4b9d15d}{%
+           family={Schottenloher},
+           familyi={S\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Berlin, Heidelberg}%
+      }
+      \list{publisher}{1}{%
+        {Springer-Verlag}%
+      }
+      \strng{namehash}{81f331dc16ef91712c32d554f4b9d15d}
+      \strng{fullhash}{81f331dc16ef91712c32d554f4b9d15d}
+      \strng{bibnamehash}{81f331dc16ef91712c32d554f4b9d15d}
+      \strng{authorbibnamehash}{81f331dc16ef91712c32d554f4b9d15d}
+      \strng{authornamehash}{81f331dc16ef91712c32d554f4b9d15d}
+      \strng{authorfullhash}{81f331dc16ef91712c32d554f4b9d15d}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{2}
+      \field{isbn}{978-3-540-68628-6}
+      \field{issn}{0075-8450}
+      \field{langid}{english}
+      \field{number}{759}
+      \field{pagetotal}{249}
+      \field{series}{Lecture {{Notes}} in {{Physics}}}
+      \field{title}{A Mathematical Introduction to Conformal Field Theory}
+      \field{urlday}{6}
+      \field{urlmonth}{4}
+      \field{urlyear}{2022}
+      \field{year}{2008}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{doi}
+      \verb 10.1007/978-3-540-68628-6
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\David\\Zotero\\storage\\22DRWINU\\Schottenloher - 2008 - A mathematical introduction to conformal field the.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/978-3-540-68628-6
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/978-3-540-68628-6
+      \endverb
+    \endentry
+    \entry{talagrandWhatQuantumField2022}{book}{}
+      \name{author}{1}{}{%
+        {{hash=c0aa8b0f36f087702a87b6002ab35850}{%
+           family={Talagrand},
+           familyi={T\bibinitperiod},
+           given={Michel},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Cambridge}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{c0aa8b0f36f087702a87b6002ab35850}
+      \strng{fullhash}{c0aa8b0f36f087702a87b6002ab35850}
+      \strng{bibnamehash}{c0aa8b0f36f087702a87b6002ab35850}
+      \strng{authorbibnamehash}{c0aa8b0f36f087702a87b6002ab35850}
+      \strng{authornamehash}{c0aa8b0f36f087702a87b6002ab35850}
+      \strng{authorfullhash}{c0aa8b0f36f087702a87b6002ab35850}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-1-316-51027-8}
+      \field{subtitle}{A First Introduction for Mathematicians}
+      \field{title}{What Is a Quantum Field Theory?}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \true{nocite}
+      \verb{doi}
+      \verb 10.1017/9781108225144
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\David\\Zotero\\storage\\SRJYRDNM\\Talagrand - 2022 - What is a quantum field theory.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.doi.org/10.1017/9781108225144
+      \endverb
+      \verb{url}
+      \verb https://www.doi.org/10.1017/9781108225144
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

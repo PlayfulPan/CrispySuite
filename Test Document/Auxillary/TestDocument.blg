@@ -1,0 +1,15 @@
+[0] Config.pm:307> INFO - This is Biber 2.17
+[0] Config.pm:310> INFO - Logfile is 'C:\Users\David\OneDrive\GitHub\CrispySuite\Test Document\Auxillary\TestDocument.blg'
+[97] biber-MSWIN64:340> INFO - === 
+[125] Biber.pm:418> INFO - Reading 'C:\Users\David\OneDrive\GitHub\CrispySuite\Test Document\Auxillary\TestDocument.bcf'
+[226] Biber.pm:969> INFO - Using all citekeys in bib section 0
+[239] Biber.pm:4383> INFO - Processing section 0
+[250] Biber.pm:4574> INFO - Looking for bibtex file 'Bibliography.bib' for section 0
+[291] bibtex.pm:1713> INFO - LaTeX decoding ...
+[314] bibtex.pm:1518> INFO - Found BibTeX data source 'Bibliography.bib'
+[384] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[384] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[384] Biber.pm:4203> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[384] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
+[392] bbl.pm:654> INFO - Writing 'C:\Users\David\OneDrive\GitHub\CrispySuite\Test Document\Auxillary\TestDocument.bbl' with encoding 'UTF-8'
+[395] bbl.pm:757> INFO - Output to C:\Users\David\OneDrive\GitHub\CrispySuite\Test Document\Auxillary\TestDocument.bbl
