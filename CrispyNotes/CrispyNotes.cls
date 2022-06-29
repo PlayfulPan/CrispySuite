@@ -105,7 +105,7 @@
         \newlength{\thm@leftmargin}% Default parameters for theorem environments
             \setlength{\thm@leftmargin}{\parindent}
         \newlength{\thm@rightmargin}
-            \setlength{\thm@rightmargin}{\parindent}
+            \setlength{\thm@rightmargin}{0pt}
         \newlength{\thm@parindent}
             \setlength{\thm@parindent}{\parindent}
         \newlength{\thm@parskip}
