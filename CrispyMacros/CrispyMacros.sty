@@ -7,6 +7,7 @@
 \RequirePackage{mathtools}
 \RequirePackage[all, error]{onlyamsmath}
 \RequirePackage{derivative}
+\RequirePackage{tensor}
 \RequirePackage{mleftright}
 \RequirePackage{tikz-cd}
 
@@ -70,7 +71,7 @@
     \DeclarePairedDelimiterX\norm[1]{\lVert}{\rVert}{\ifblank{#1}{\blankvar}{#1}} % Vector Norm
     \DeclarePairedDelimiterX\abs[1]{\lvert}{\rvert}{\ifblank{#1}{\blankvar}{#1}} % Absolute Value
     \DeclarePairedDelimiterX\eval[1]{.}{\rvert}{#1} % Evaluated at
-
+        \reDeclarePairedDelimiterInnerWrapper\eval{nostarnonscaled}{#2#3}
 
 
 %Dirac Notation
